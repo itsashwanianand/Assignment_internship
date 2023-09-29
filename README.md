@@ -5,6 +5,6 @@ Here is the required O/P for the Assignment!
 ![image](https://github.com/itsashwanianand/Assignment_internship/assets/116836552/82ee4b50-9dc7-4257-b962-5004ddaca283)
 
 
-[The folder to the screenshots](.Rasa_Projects/install_demo/screenshots/)
+[The folder to the screenshots](./Rasa_Projects/install_demo/screenshots/)
 
 
