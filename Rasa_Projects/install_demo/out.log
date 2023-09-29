@@ -1,0 +1,100 @@
+2023-09-29 22:01:42,444 [DEBUG]  Sanic-CORS: Configuring CORS with resources: {'/*': {'origins': [''], 'methods': 'DELETE, GET, HEAD, OPTIONS, PATCH, POST, PUT', 'allow_headers': ['.*'], 'expose_headers': 'filename', 'supports_credentials': True, 'max_age': None, 'send_wildcard': False, 'automatic_options': True, 'vary_header': True, 'resources': {'/*': {'origins': ''}}, 'intercept_exceptions': True, 'always_send': True}}
+2023-09-29 22:01:42,446 [DEBUG]  Available web server routes: 
+/webhooks/rasa                                     GET                            rasa_core_no_api.custom_webhook_RasaChatInput.health
+/webhooks/rasa/webhook                             POST                           rasa_core_no_api.custom_webhook_RasaChatInput.receive
+/webhooks/rest                                     GET                            rasa_core_no_api.custom_webhook_RestInput.health
+/webhooks/rest/webhook                             POST                           rasa_core_no_api.custom_webhook_RestInput.receive
+/                                                  GET                            rasa_core_no_api.hello
+2023-09-29 22:01:42,459 [INFO ]  Starting Rasa server on http://0.0.0.0:5005
+2023-09-29 22:01:42,459 [DEBUG]  Using the default number of Sanic workers (1).
+2023-09-29 22:01:43,286 [DEBUG]  Skipping telemetry reporting: no license hash found.
+2023-09-29 22:01:43,393 [DEBUG]  Connected to InMemoryTrackerStore.
+2023-09-29 22:01:43,398 [DEBUG]  Connected to lock store 'InMemoryLockStore'.
+2023-09-29 22:01:43,399 [DEBUG]  Instantiated NLG to 'TemplatedNaturalLanguageGenerator'.
+2023-09-29 22:01:43,400 [INFO ]  Loading model models\20230929-215624-exact-domain.tar.gz...
+2023-09-29 22:01:44,026 [DEBUG]  Extracted model to 'C:\Users\ASHWAN~1\AppData\Local\Temp\tmpxa6p351p'.
+2023-09-29 22:01:44,070 [DEBUG]  Node 'nlu_message_converter' loading 'NLUMessageConverter.load' and kwargs: '{}'.
+2023-09-29 22:01:44,070 [DEBUG]  Node 'run_WhitespaceTokenizer0' loading 'WhitespaceTokenizer.load' and kwargs: '{}'.
+2023-09-29 22:01:44,081 [DEBUG]  Node 'run_RegexFeaturizer1' loading 'RegexFeaturizer.load' and kwargs: '{}'.
+2023-09-29 22:01:44,081 [DEBUG]  Resource 'train_RegexFeaturizer1' was requested for reading.
+2023-09-29 22:01:44,084 [DEBUG]  Node 'run_CRFEntityExtractor2' loading 'CRFEntityExtractor.load' and kwargs: '{}'.
+2023-09-29 22:01:44,084 [DEBUG]  Resource 'train_CRFEntityExtractor2' was requested for reading.
+2023-09-29 22:01:44,117 [DEBUG]  Node 'run_EntitySynonymMapper3' loading 'EntitySynonymMapper.load' and kwargs: '{}'.
+2023-09-29 22:01:44,117 [DEBUG]  Resource 'train_EntitySynonymMapper3' was requested for reading.
+2023-09-29 22:01:44,120 [DEBUG]  Node 'run_CountVectorsFeaturizer4' loading 'CountVectorsFeaturizer.load' and kwargs: '{}'.
+2023-09-29 22:01:44,120 [DEBUG]  Resource 'train_CountVectorsFeaturizer4' was requested for reading.
+2023-09-29 22:01:44,130 [DEBUG]  Node 'run_DIETClassifier5' loading 'DIETClassifier.load' and kwargs: '{}'.
+2023-09-29 22:01:44,130 [DEBUG]  Resource 'train_DIETClassifier5' was requested for reading.
+2023-09-29 22:01:44,140 [DEBUG]  Loading the model from C:\Users\ASHWAN~1\AppData\Local\Temp\tmphzs946js\train_DIETClassifier5\DIETClassifier.tf_model with finetune_mode=False...
+2023-09-29 22:01:44,373 [DEBUG]  Following metrics will be logged during training: 
+2023-09-29 22:01:44,373 [DEBUG]    t_loss (total loss)
+2023-09-29 22:01:44,373 [DEBUG]    i_acc (intent acc)
+2023-09-29 22:01:44,373 [DEBUG]    i_loss (intent loss)
+2023-09-29 22:01:44,396 [DEBUG]    e_f1 (entity f1)
+2023-09-29 22:01:44,398 [DEBUG]    e_loss (entity loss)
+2023-09-29 22:02:45,729 [DEBUG]  Finished loading the model.
+2023-09-29 22:02:45,731 [DEBUG]  Node 'run_RegexMessageHandler' loading 'RegexMessageHandler.load' and kwargs: '{}'.
+2023-09-29 22:02:45,731 [DEBUG]  Node 'domain_provider' loading 'DomainProvider.load' and kwargs: '{}'.
+2023-09-29 22:02:45,748 [DEBUG]  Resource 'domain_provider' was requested for reading.
+2023-09-29 22:02:45,805 [DEBUG]  Node 'run_MemoizationPolicy0' loading 'MemoizationPolicy.load' and kwargs: '{}'.
+2023-09-29 22:02:45,805 [DEBUG]  Resource 'train_MemoizationPolicy0' was requested for reading.
+2023-09-29 22:02:45,812 [DEBUG]  Node 'run_TEDPolicy1' loading 'TEDPolicy.load' and kwargs: '{}'.
+2023-09-29 22:02:45,812 [DEBUG]  Resource 'train_TEDPolicy1' was requested for reading.
+2023-09-29 22:02:45,825 [DEBUG]  Loading the model from C:\Users\ASHWAN~1\AppData\Local\Temp\tmphzs946js\train_TEDPolicy1\ted_policy.tf_model with finetune_mode=False...
+2023-09-29 22:03:09,450 [DEBUG]  Finished loading the model.
+2023-09-29 22:03:09,451 [DEBUG]  Node 'run_RulePolicy2' loading 'RulePolicy.load' and kwargs: '{}'.
+2023-09-29 22:03:09,453 [DEBUG]  Resource 'train_RulePolicy2' was requested for reading.
+2023-09-29 22:03:09,476 [DEBUG]  Node 'rule_only_data_provider' loading 'RuleOnlyDataProvider.load' and kwargs: '{}'.
+2023-09-29 22:03:09,476 [DEBUG]  Resource 'train_RulePolicy2' was requested for reading.
+2023-09-29 22:03:09,481 [DEBUG]  Node 'select_prediction' loading 'DefaultPolicyPredictionEnsemble.load' and kwargs: '{}'.
+2023-09-29 22:03:09,500 [INFO ]  Rasa server is up and running.
+2023-09-29 22:03:09,504 [INFO ]  Enabling coroutine debugging. Loop id 2191855426384.
+2023-09-29 23:15:54,996 [DEBUG]  Sanic-CORS: Configuring CORS with resources: {'/*': {'origins': [''], 'methods': 'DELETE, GET, HEAD, OPTIONS, PATCH, POST, PUT', 'allow_headers': ['.*'], 'expose_headers': 'filename', 'supports_credentials': True, 'max_age': None, 'send_wildcard': False, 'automatic_options': True, 'vary_header': True, 'resources': {'/*': {'origins': ''}}, 'intercept_exceptions': True, 'always_send': True}}
+2023-09-29 23:15:55,012 [DEBUG]  Available web server routes: 
+/webhooks/rasa                                     GET                            rasa_core_no_api.custom_webhook_RasaChatInput.health
+/webhooks/rasa/webhook                             POST                           rasa_core_no_api.custom_webhook_RasaChatInput.receive
+/                                                  GET                            rasa_core_no_api.hello
+2023-09-29 23:15:55,012 [INFO ]  Starting Rasa server on http://0.0.0.0:5005
+2023-09-29 23:15:55,012 [DEBUG]  Using the default number of Sanic workers (1).
+2023-09-29 23:15:55,379 [DEBUG]  Skipping telemetry reporting: no license hash found.
+2023-09-29 23:15:55,423 [DEBUG]  Connected to InMemoryTrackerStore.
+2023-09-29 23:15:55,423 [DEBUG]  Connected to lock store 'InMemoryLockStore'.
+2023-09-29 23:15:55,423 [DEBUG]  Instantiated NLG to 'TemplatedNaturalLanguageGenerator'.
+2023-09-29 23:15:55,430 [INFO ]  Loading model models\20230929-231249-damp-lake.tar.gz...
+2023-09-29 23:15:55,699 [DEBUG]  Extracted model to 'C:\Users\ASHWAN~1\AppData\Local\Temp\tmpgqrx4anv'.
+2023-09-29 23:15:55,710 [DEBUG]  Node 'nlu_message_converter' loading 'NLUMessageConverter.load' and kwargs: '{}'.
+2023-09-29 23:15:55,710 [DEBUG]  Node 'run_WhitespaceTokenizer0' loading 'WhitespaceTokenizer.load' and kwargs: '{}'.
+2023-09-29 23:15:55,718 [DEBUG]  Node 'run_RegexFeaturizer1' loading 'RegexFeaturizer.load' and kwargs: '{}'.
+2023-09-29 23:15:55,718 [DEBUG]  Resource 'train_RegexFeaturizer1' was requested for reading.
+2023-09-29 23:15:55,718 [DEBUG]  Node 'run_CRFEntityExtractor2' loading 'CRFEntityExtractor.load' and kwargs: '{}'.
+2023-09-29 23:15:55,720 [DEBUG]  Resource 'train_CRFEntityExtractor2' was requested for reading.
+2023-09-29 23:15:55,733 [DEBUG]  Node 'run_EntitySynonymMapper3' loading 'EntitySynonymMapper.load' and kwargs: '{}'.
+2023-09-29 23:15:55,733 [DEBUG]  Resource 'train_EntitySynonymMapper3' was requested for reading.
+2023-09-29 23:15:55,736 [DEBUG]  Node 'run_CountVectorsFeaturizer4' loading 'CountVectorsFeaturizer.load' and kwargs: '{}'.
+2023-09-29 23:15:55,737 [DEBUG]  Resource 'train_CountVectorsFeaturizer4' was requested for reading.
+2023-09-29 23:15:55,739 [DEBUG]  Node 'run_DIETClassifier5' loading 'DIETClassifier.load' and kwargs: '{}'.
+2023-09-29 23:15:55,739 [DEBUG]  Resource 'train_DIETClassifier5' was requested for reading.
+2023-09-29 23:15:55,744 [DEBUG]  Loading the model from C:\Users\ASHWAN~1\AppData\Local\Temp\tmpycnaf9vj\train_DIETClassifier5\DIETClassifier.tf_model with finetune_mode=False...
+2023-09-29 23:15:55,803 [DEBUG]  Following metrics will be logged during training: 
+2023-09-29 23:15:55,803 [DEBUG]    t_loss (total loss)
+2023-09-29 23:15:55,803 [DEBUG]    i_acc (intent acc)
+2023-09-29 23:15:55,805 [DEBUG]    i_loss (intent loss)
+2023-09-29 23:15:55,805 [DEBUG]    e_f1 (entity f1)
+2023-09-29 23:15:55,807 [DEBUG]    e_loss (entity loss)
+2023-09-29 23:16:23,652 [DEBUG]  Finished loading the model.
+2023-09-29 23:16:23,658 [DEBUG]  Node 'run_RegexMessageHandler' loading 'RegexMessageHandler.load' and kwargs: '{}'.
+2023-09-29 23:16:23,661 [DEBUG]  Node 'domain_provider' loading 'DomainProvider.load' and kwargs: '{}'.
+2023-09-29 23:16:23,661 [DEBUG]  Resource 'domain_provider' was requested for reading.
+2023-09-29 23:16:23,683 [DEBUG]  Node 'run_MemoizationPolicy0' loading 'MemoizationPolicy.load' and kwargs: '{}'.
+2023-09-29 23:16:23,683 [DEBUG]  Resource 'train_MemoizationPolicy0' was requested for reading.
+2023-09-29 23:16:23,688 [DEBUG]  Node 'run_TEDPolicy1' loading 'TEDPolicy.load' and kwargs: '{}'.
+2023-09-29 23:16:23,688 [DEBUG]  Resource 'train_TEDPolicy1' was requested for reading.
+2023-09-29 23:16:23,688 [DEBUG]  Loading the model from C:\Users\ASHWAN~1\AppData\Local\Temp\tmpycnaf9vj\train_TEDPolicy1\ted_policy.tf_model with finetune_mode=False...
+2023-09-29 23:16:34,683 [DEBUG]  Finished loading the model.
+2023-09-29 23:16:34,688 [DEBUG]  Node 'run_RulePolicy2' loading 'RulePolicy.load' and kwargs: '{}'.
+2023-09-29 23:16:34,689 [DEBUG]  Resource 'train_RulePolicy2' was requested for reading.
+2023-09-29 23:16:34,689 [DEBUG]  Node 'rule_only_data_provider' loading 'RuleOnlyDataProvider.load' and kwargs: '{}'.
+2023-09-29 23:16:34,689 [DEBUG]  Resource 'train_RulePolicy2' was requested for reading.
+2023-09-29 23:16:34,689 [DEBUG]  Node 'select_prediction' loading 'DefaultPolicyPredictionEnsemble.load' and kwargs: '{}'.
+2023-09-29 23:16:34,701 [INFO ]  Rasa server is up and running.
+2023-09-29 23:16:34,703 [INFO ]  Enabling coroutine debugging. Loop id 2351034243440.

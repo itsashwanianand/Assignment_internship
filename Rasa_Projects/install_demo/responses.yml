@@ -1,0 +1,20 @@
+utter_greet:
+- text: "Hello! How can I assist you today?"
+
+utter_goodbye:
+- text: "Goodbye! Have a great day."
+
+utter_email_sent:
+- text: "Mail Sent."
+
+utter_email_not_sent:
+- text: "Sorry, I couldn't send the email. Please try again later."
+
+utter_email_prompt:
+- text: "Sure, I can help you send an email. Please provide the recipient's email address."
+
+utter_email_confirmation:
+- text: "I'm ready to send the email to {email}. Should I go ahead?"
+
+utter_email_sent_confirmation:
+- text: "Great! I have sent the email to {email}."

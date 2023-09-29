@@ -1,0 +1,80 @@
+version: "3.1"
+
+stories:
+
+- story: happy path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_great
+  - action: utter_happy
+
+- story: sad path 1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+
+- story: sad path 2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_goodbye
+
+- story: Send Email
+  steps:
+  - intent: send_email
+  - action: email_action
+  - slot_was_set:
+    - email: "xyz@gmail.com"
+  - action: utter_email_sent
+
+- story: User wants to send an email
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: send_email
+  - action: email_action
+  - slot_was_set:
+    - email: "aubnmaiml@gmail.com"
+  - action: utter_email_sent
+
+- story: Send Email - Direct Mention
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: send_email
+  - action: email_action
+  - slot_was_set:
+    - email: "xyz@gmail.com"
+  - action: utter_email_sent
+
+- story: Send Email - Indirect Mention
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_great
+  - action: utter_happy
+  - intent: send_email
+  - action: email_action
+  - slot_was_set:
+    - email: "abc@example.com"
+  - action: utter_email_sent
+
+- story: Send Email - Specific Request
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: send_email
+  - action: email_action
+  - slot_was_set:
+    - email: "john.doe@example.com"
+  - action: utter_email_sent

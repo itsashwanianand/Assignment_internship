@@ -1,0 +1,16 @@
+language: "en"
+
+pipeline:
+  - name: "WhitespaceTokenizer"
+  - name: "RegexFeaturizer"
+  - name: "CRFEntityExtractor"
+  - name: "EntitySynonymMapper"
+  - name: "CountVectorsFeaturizer"
+  - name: "DIETClassifier"
+
+policies:
+  - name: "MemoizationPolicy"
+  - name: "TEDPolicy"
+  - name: "RulePolicy"
+
+assistant_id: 20230929-170404-coplanar-zoning
